@@ -35,6 +35,7 @@ if(isset($_GET['delete_all'])){
     <script src="assets/bootstrap/js/jquery-3.4.0.js"></script>
     <script src="assets/bootstrap/js/popper.min.js"></script>
     <link rel="stylesheet" href="assets/bootstrap/css/custom.css">
+    <link rel="stylesheet" href="assets/uploaded_image">
 
 </head>
 <body>
@@ -69,7 +70,7 @@ if(isset($_GET['delete_all'])){
                     ?>
 
                     <tr>
-                        <td><img src="uploaded_img/<?php echo $fetch_cart['image']; ?>" height="100" alt=""></td>
+                        <td><img src="assets/uploaded_image/<?php echo $fetch_cart['image']; ?>" height="100" alt=""></td>
                         <td><?php echo $fetch_cart['name']; ?></td>
                         <td>$<?php echo number_format($fetch_cart['price']); ?>/-</td>
                         <td>
@@ -107,7 +108,7 @@ if(isset($_GET['delete_all'])){
 </div>
 
 <!-- custom js file link  -->
-<script src="js/script.js"></script>
+<script src="assets/bootstrap/js/script.js"></script>
 
 </body>
 </html>

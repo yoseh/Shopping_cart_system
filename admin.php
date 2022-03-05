@@ -12,7 +12,7 @@ if(isset($_POST['add_product'])){
 
     if($insert_query){
         move_uploaded_file($p_image_tmp_name, $p_image_folder);
-        $message[] = 'product add successfully';
+        $message[] = 'product added successfully';
     }else{
         $message[] = 'could not add the product';
     }
@@ -64,6 +64,7 @@ if(isset($_POST['update_product'])){
     <script src="assets/bootstrap/js/jquery-3.4.0.js"></script>
     <script src="assets/bootstrap/js/popper.min.js"></script>
     <link rel="stylesheet" href="assets/bootstrap/css/custom.css">
+    <link rel="stylesheet" href="assets/uploaded_image">
 
 
 </head>
@@ -88,7 +89,7 @@ if(isset($message)){
             <h3>add a new product</h3>
             <input type="text" name="p_name" placeholder="enter the product name" class="box" required>
             <input type="number" name="p_price" min="0" placeholder="enter the product price" class="box" required>
-            <input type="file" name="p_image" accept="image/png, image/jpg, image/jpeg" class="box" required>
+            <input type="file" name="p_image" accept="image.jpg, image pnj" class="box" required>
             <input type="submit" value="add the product" name="add_product" class="btn">
         </form>
 
@@ -114,7 +115,7 @@ if(isset($message)){
                     ?>
 
                     <tr>
-                        <td><img src="uploaded_image/<?php echo $row['image']; ?>" height="100" alt=""></td>
+                        <td><img src="assets/uploaded_image/<?php echo $row['image']; ?>" height="100" alt=""></td>
                         <td><?php echo $row['name']; ?></td>
                         <td>$<?php echo $row['price']; ?>/-</td>
                         <td>
@@ -146,7 +147,7 @@ if(isset($message)){
                     ?>
 
                     <form action="" method="post" enctype="multipart/form-data">
-                        <img src="uploaded_img/<?php echo $fetch_edit['image']; ?>" height="200" alt="">
+                        <img src="assets/uploaded_image/<?php echo $fetch_edit['image']; ?>" height="200" alt="">
                         <input type="hidden" name="update_p_id" value="<?php echo $fetch_edit['id']; ?>">
                         <input type="text" class="box" required name="update_p_name" value="<?php echo $fetch_edit['name']; ?>">
                         <input type="number" min="0" class="box" required name="update_p_price" value="<?php echo $fetch_edit['price']; ?>">
@@ -167,7 +168,7 @@ if(isset($message)){
 </div>
 
 <!-- custom js file link  -->
-<script src="js/script.js"></script>
+<script src="assets/bootstrap/js/script.js"></script>
 
 </body>
 </html>

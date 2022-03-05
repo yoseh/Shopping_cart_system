@@ -32,7 +32,7 @@ if(isset($_POST['order_btn'])){
         echo "
       <div class='order-message-container'>
       <div class='message-container'>
-         <h3>thank you for shopping $name!</h3>
+         <h3>thank you $name for shopping!</h3>
          <div class='order-detail'>
             <span>".$total_product."</span>
             <span class='total'> total : $".$price_total."/-  </span>
@@ -43,7 +43,7 @@ if(isset($_POST['order_btn'])){
             <p> your email : <span>".$email."</span> </p>
             <p> your address : <span>".$flat.", ".$street.", ".$city.", ".$state.", ".$country." - ".$pin_code."</span> </p>
             <p> your payment mode : <span>".$method."</span> </p>
-            <p class='text-info'>(* Please Pay When Your Products Arrives*)</p>
+            <p class='text-info'>(* Please Pay when your order arrives*)
          </div>
             <a href='products.php' class='btn'>continue shopping</a>
          </div>
@@ -66,6 +66,7 @@ if(isset($_POST['order_btn'])){
     <script src="assets/bootstrap/js/jquery-3.4.0.js"></script>
     <script src="assets/bootstrap/js/popper.min.js"></script>
     <link rel="stylesheet" href="assets/bootstrap/css/custom.css">
+    <link rel="stylesheet" href="assets/uploaded_image">
 </head>
 <body>
 
@@ -130,11 +131,11 @@ if(isset($_POST['order_btn'])){
                 </div>
                 <div class="inputBox">
                     <span>city</span>
-                    <input type="text" placeholder="e.g. mumbai" name="city" required>
+                    <input type="text" placeholder="e.g. Kampala" name="city" required>
                 </div>
                 <div class="inputBox">
                     <span>state</span>
-                    <input type="text" placeholder="e.g. maharashtra" name="state" required>
+                    <input type="text" placeholder="e.g. Rift Valley" name="state" required>
                 </div>
                 <div class="inputBox">
                     <span>country</span>
@@ -153,7 +154,7 @@ if(isset($_POST['order_btn'])){
 </div>
 
 <!-- custom js file link  -->
-<script src="js/script.js"></script>
+<script src="assets/bootstrap/js/script.js"></script>
 
 </body>
 </html>

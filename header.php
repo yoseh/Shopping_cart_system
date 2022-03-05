@@ -2,7 +2,7 @@
 
     <div class="flex">
 
-        <a href="#" class="logo">foodies</a>
+        <a href="#" class="logo">Foodies</a>
 
         <nav class="navbar">
             <a href="admin.php">add products</a>

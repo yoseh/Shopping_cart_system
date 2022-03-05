@@ -32,6 +32,7 @@ if(isset($_POST['add_to_cart'])){
     <script src="assets/bootstrap/js/jquery-3.4.0.js"></script>
     <script src="assets/bootstrap/js/popper.min.js"></script>
     <link rel="stylesheet" href="assets/bootstrap/css/custom.css">
+    <link rel="stylesheet" href="assets/uploaded_image">
 
 
 </head>
@@ -66,7 +67,7 @@ if(isset($message)){
 
                     <form action="" method="post">
                         <div class="box">
-                            <img src="uploaded image/<?php echo $fetch_product['image']; ?>" alt="">
+                            <img src="assets/uploaded_image/<?php echo $fetch_product['image']; ?>" alt="">
                             <h3><?php echo $fetch_product['name']; ?></h3>
                             <div class="price">$<?php echo $fetch_product['price']; ?>/-</div>
                             <input type="hidden" name="product_name" value="<?php echo $fetch_product['name']; ?>">
@@ -88,7 +89,7 @@ if(isset($message)){
 </div>
 
 <!-- custom js file link  -->
-<script src="js/script.js"></script>
+<script src="assets/bootstrap/js/script.js"></script>
 
 </body>
 </html>
