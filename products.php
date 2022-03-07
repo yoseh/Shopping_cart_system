@@ -88,8 +88,6 @@ if(isset($message)){
 
 </div>
 
-<!-- custom js file link  -->
-<script src="assets/bootstrap/js/script.js"></script>
 
 </body>
 </html>
